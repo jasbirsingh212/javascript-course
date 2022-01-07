@@ -3,7 +3,7 @@
 ///////////////////////////////////////
 // Scoping in Practice
 
-/*
+
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
@@ -14,7 +14,7 @@ function calcAge(birthYear) {
     if (birthYear >= 1981 && birthYear <= 1996) {
       var millenial = true;
       // Creating NEW variable with same name as outer scope's variable
-      const firstName = 'Steven';
+      var firstName = 'Steven';
 
       // Reasssigning outer scope's variable
       output = 'NEW OUTPUT!';
@@ -38,6 +38,7 @@ function calcAge(birthYear) {
 
 const firstName = 'Jonas';
 calcAge(1991);
+/*
 // console.log(age);
 // printAge();
 
