@@ -88,6 +88,5 @@ function boo(){
 
     return f(2);
 }
-
 // console.log(foo(10));
 // console.log(boo(10))
