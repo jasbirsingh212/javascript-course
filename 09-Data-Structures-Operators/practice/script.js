@@ -29,3 +29,11 @@ const restaurant = {
     },
   },
 };
+
+
+//shalow copy
+const newRes = {founder: 'jasbir', ...restaurant};
+restaurant.name = 'lalala';
+console.log(newRes);
+newRes.name = 'jasbir';
+console.log(newRes, restaurant);
