@@ -1,4 +1,3 @@
-
 'use strict';
 
 // Data needed for a later exercise
