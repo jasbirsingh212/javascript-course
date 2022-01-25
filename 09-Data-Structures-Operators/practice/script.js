@@ -37,3 +37,22 @@ restaurant.name = 'lalala';
 console.log(newRes);
 newRes.name = 'jasbir';
 console.log(newRes, restaurant);
+
+
+//coding challenge 3
+
+const str = 'under_score';
+
+const arr = str.split("_");
+
+const firstLetterCap = (str) => {
+
+  return str.replace(str[0], str[0].toUpperCase());
+
+}
+
+const tempStr = firstLetterCap(arr[1]);
+arr[1] = tempStr;
+
+const finalStr = arr.join("");
+console.log(finalStr);
