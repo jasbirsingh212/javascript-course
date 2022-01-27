@@ -106,3 +106,10 @@ const objectTest = {
 objectTest.intro();
 
 
+const array = [1,2,3,4,5,6];
+const getEvens = (item) => {
+
+    return item % 2 === 0 ? item : null;
+}
+const evenNumbers = array.filter(getEvens);
+console.log(evenNumbers);
