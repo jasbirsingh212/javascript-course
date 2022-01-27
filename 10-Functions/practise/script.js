@@ -96,13 +96,20 @@
 //In browser: window object;
 //In node run-time: {} (empty object);
 
-const objectTest = {
-    firstName: 'objectTest',
-    intro:() => {
-        console.log(this);
-    }
+// const objectTest = {
+//     firstName: 'objectTest',
+//     intro:() => {
+//         console.log(this);
+//     }
+// }
+
+// objectTest.intro();
+
+
+const array = [1,2,3,4,5,6];
+const getEvens = (item) => {
+
+    return item % 2 === 0 ? item : null;
 }
-
-objectTest.intro();
-
-
+const evenNumbers = array.filter(getEvens);
+console.log(evenNumbers);
