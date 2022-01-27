@@ -96,14 +96,14 @@
 //In browser: window object;
 //In node run-time: {} (empty object);
 
-const objectTest = {
-    firstName: 'objectTest',
-    intro:() => {
-        console.log(this);
-    }
-}
+// const objectTest = {
+//     firstName: 'objectTest',
+//     intro:() => {
+//         console.log(this);
+//     }
+// }
 
-objectTest.intro();
+// objectTest.intro();
 
 
 const array = [1,2,3,4,5,6];
