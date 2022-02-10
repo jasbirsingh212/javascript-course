@@ -93,7 +93,16 @@ const displayMovements = movements => {
   });
 };
 
+const calDisplayBalance = (arr) => {
+
+  const balance = arr.reduce((acc, cur) => acc + cur);
+  labelBalance.textContent = balance;
+
+}
+
 displayMovements(account1.movements);
+calDisplayBalance(account1.movements);
+
 
 const createUserNames = arr => {
   arr.forEach(item => {
@@ -111,7 +120,7 @@ console.log(accounts);
 // const move = movements.filter(mov =>  mov > 0 );
 // console.log(move)
 
-// const balance = movements.reduce((acc, cur) => acc + cur, [])
+// const balance = movements.reduce((acc, cur) => acc + cur, undefined)
 // console.log(balance)
 
 // const max = movements.reduce((acc, cur) => acc > cur ? acc: cur);
