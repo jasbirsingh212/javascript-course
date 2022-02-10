@@ -110,3 +110,6 @@ console.log(accounts);
 
 // const move = movements.filter(mov =>  mov > 0 );
 // console.log(move)
+
+// const balance = movements.reduce((acc, cur) => acc + cur, [])
+// console.log(balance)
