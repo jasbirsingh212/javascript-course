@@ -113,3 +113,6 @@ console.log(accounts);
 
 // const balance = movements.reduce((acc, cur) => acc + cur, [])
 // console.log(balance)
+
+// const max = movements.reduce((acc, cur) => acc > cur ? acc: cur);
+// console.log(max);
