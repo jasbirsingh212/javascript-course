@@ -107,3 +107,6 @@ const createUserNames = arr => {
 
 createUserNames(accounts);
 console.log(accounts);
+
+// const move = movements.filter(mov =>  mov > 0 );
+// console.log(move)
