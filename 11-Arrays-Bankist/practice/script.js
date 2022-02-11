@@ -93,4 +93,35 @@ const displayMovements = movements => {
   });
 };
 
+const calDisplayBalance = (arr) => {
+
+  const balance = arr.reduce((acc, cur) => acc + cur);
+  labelBalance.textContent = balance;
+
+}
+
 displayMovements(account1.movements);
+calDisplayBalance(account1.movements);
+
+
+const createUserNames = arr => {
+  arr.forEach(item => {
+    item.username = item.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+
+createUserNames(accounts);
+console.log(accounts);
+
+// const move = movements.filter(mov =>  mov > 0 );
+// console.log(move)
+
+// const balance = movements.reduce((acc, cur) => acc + cur, undefined)
+// console.log(balance)
+
+// const max = movements.reduce((acc, cur) => acc > cur ? acc: cur);
+// console.log(max);
