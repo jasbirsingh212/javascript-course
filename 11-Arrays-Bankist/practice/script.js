@@ -193,10 +193,20 @@ const handleTransfer = e => {
   inputTransferTo.value = inputTransferAmount.value = '';
 };
 
-const handleLoan = (e) => {
+const handleLoan = e => {
   e.preventDefault();
-  
-}
+
+  // @ts-ignore
+  const loanAmount = Number(inputLoanAmount.value);
+  const isLoanable = arrSum(currentUser.movements.filter(mov => mov > 0)) * 0.2 >= loanAmount;
+  if (loanAmount > 0 && isLoanable) {
+    currentUser.movements.push(loanAmount);
+    updateUI(currentUser);
+  }
+
+  // @ts-ignore
+  inputLoanAmount.value = ''
+};
 
 btnLogin.addEventListener('click', handleLogin);
 btnTransfer.addEventListener('click', handleTransfer);
