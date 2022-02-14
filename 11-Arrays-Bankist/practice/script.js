@@ -93,39 +93,27 @@ const displayMovements = movements => {
   });
 };
 
-const arrSum = (arr) => {
+const arrSum = arr => {
+  return arr?.length && arr.reduce((acc, cur) => acc + cur);
+};
 
-  return arr.reduce((acc, cur) => acc + cur);
-}
-
-const calDisplayBalance = (arr) => {
-
+const calDisplayBalance = arr => {
   const balance = arrSum(arr);
   labelBalance.textContent = `${balance}€`;
+};
 
-}
+const calDisplaySummary = arr => {
+  const deposits = arr.filter(item => item > 0);
+  const withdrawal = arr.filter(item => item < 0);
 
-
-
-const calDisplaySummary = (arr) => {
-
-  const deposits = arr.filter((item) => item  > 0);
-  const withdrawal = arr.filter((item) => item < 0);
-  
   const depositSum = arrSum(deposits);
   const withdrawalSum = arrSum(withdrawal);
-  const interestSum = arrSum(deposits.map((item) => (item * 1.2) / 100));
+  const interestSum = arrSum(deposits.map(item => (item * 1.2) / 100));
 
-  labelSumIn.textContent = `${depositSum}€`
-  labelSumOut.textContent = `${Math.abs(withdrawalSum)}€`
-  labelSumInterest.textContent = `${Math.trunc(interestSum)}€`
-
-}
-
-displayMovements(account1.movements);
-calDisplayBalance(account1.movements);
-calDisplaySummary(account1.movements);
-
+  labelSumIn.textContent = `${depositSum}€`;
+  labelSumOut.textContent = `${Math.abs(withdrawalSum)}€`;
+  labelSumInterest.textContent = `${Math.trunc(interestSum)}€`;
+};
 
 const createUserNames = arr => {
   arr.forEach(item => {
@@ -148,3 +136,28 @@ console.log(accounts);
 
 // const max = movements.reduce((acc, cur) => acc > cur ? acc: cur);
 // console.log(max);
+
+const handleLogin = e => {
+  e.preventDefault();
+  // @ts-ignore
+  const userName = inputLoginUsername.value;
+
+  const currentUser = accounts.find(account => account.username === userName);
+  console.log(currentUser);
+
+  // @ts-ignore
+  if (currentUser?.pin === Number(inputLoginPin?.value)) {
+    // @ts-ignore
+    inputLoginUsername.value = inputLoginPin.value =  ''
+    // @ts-ignore
+    inputLoginPin.blur()
+
+    labelWelcome.textContent = `Welcome back, ${currentUser.owner.split(' ')[0] }`;
+    // @ts-ignore
+    containerApp.style.opacity = 100;
+    displayMovements(currentUser?.movements);
+    calDisplayBalance(currentUser?.movements);
+    calDisplaySummary(currentUser?.movements);
+  }
+};
+btnLogin.addEventListener('click', handleLogin);
