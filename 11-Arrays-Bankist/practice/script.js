@@ -136,28 +136,68 @@ console.log(accounts);
 
 // const max = movements.reduce((acc, cur) => acc > cur ? acc: cur);
 // console.log(max);
+let currentUser;
+const updateUI = currentUser => {
+  displayMovements(currentUser?.movements);
+  calDisplayBalance(currentUser?.movements);
+  calDisplaySummary(currentUser?.movements);
+};
 
 const handleLogin = e => {
   e.preventDefault();
   // @ts-ignore
   const userName = inputLoginUsername.value;
 
-  const currentUser = accounts.find(account => account.username === userName);
+  currentUser = accounts.find(account => account.username === userName);
   console.log(currentUser);
 
   // @ts-ignore
   if (currentUser?.pin === Number(inputLoginPin?.value)) {
     // @ts-ignore
-    inputLoginUsername.value = inputLoginPin.value =  ''
+    inputLoginUsername.value = inputLoginPin.value = '';
     // @ts-ignore
-    inputLoginPin.blur()
+    inputLoginPin.blur();
 
-    labelWelcome.textContent = `Welcome back, ${currentUser.owner.split(' ')[0] }`;
+    labelWelcome.textContent = `Welcome back, ${
+      currentUser.owner.split(' ')[0]
+    }`;
     // @ts-ignore
     containerApp.style.opacity = 100;
-    displayMovements(currentUser?.movements);
-    calDisplayBalance(currentUser?.movements);
-    calDisplaySummary(currentUser?.movements);
+
+    //UI update
+    // @ts-ignore
+    updateUI(currentUser);
   }
 };
+
+const handleTransfer = e => {
+  e.preventDefault();
+  // @ts-ignore
+  const transferToUser = inputTransferTo.value;
+  // @ts-ignore
+  const transferAmount = Number(inputTransferAmount.value);
+
+  const recivedUser = accounts.find(
+    account => account.username === transferToUser
+  );
+  const isTranserable = transferAmount < arrSum(currentUser.movements);
+  const isDifferentUser = recivedUser.username !== currentUser.userName;
+
+  if (transferAmount > 0 && recivedUser && isTranserable && isDifferentUser) {
+    currentUser.movements.push(-1 * transferAmount);
+    recivedUser.movements.push(transferAmount);
+    updateUI(currentUser);
+  }
+
+  // @ts-ignore
+  inputTransferTo.value = inputTransferAmount.value = '';
+};
+
+const handleLoan = (e) => {
+  e.preventDefault();
+  
+}
+
 btnLogin.addEventListener('click', handleLogin);
+btnTransfer.addEventListener('click', handleTransfer);
+btnLoan.addEventListener('click', handleLoan);
