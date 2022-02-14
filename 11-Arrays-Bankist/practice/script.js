@@ -198,16 +198,38 @@ const handleLoan = e => {
 
   // @ts-ignore
   const loanAmount = Number(inputLoanAmount.value);
-  const isLoanable = arrSum(currentUser.movements.filter(mov => mov > 0)) * 0.2 >= loanAmount;
+  const isLoanable =
+    arrSum(currentUser.movements.filter(mov => mov > 0)) * 0.2 >= loanAmount;
   if (loanAmount > 0 && isLoanable) {
     currentUser.movements.push(loanAmount);
     updateUI(currentUser);
   }
 
   // @ts-ignore
-  inputLoanAmount.value = ''
+  inputLoanAmount.value = '';
+};
+
+const handleCloseAccount = e => {
+  e.preventDefault();
+  // @ts-ignore
+  const closeUser = inputCloseUsername.value;
+  // @ts-ignore
+  const closePin = Number(inputClosePin.value);
+  const isValidPin =
+    accounts.find(account => account?.username === closeUser)?.pin === closePin;
+  const isExistsIndex = accounts.findIndex(acc => acc.username === closeUser);
+
+  if ((isExistsIndex >= 0 ? true : false) && isValidPin) {
+    // @ts-ignore
+    accounts.splice(isExistsIndex, 1);
+  }
+
+  console.log(accounts)
+  // @ts-ignore
+  inputClosePin.value = inputCloseUsername.value = '';
 };
 
 btnLogin.addEventListener('click', handleLogin);
 btnTransfer.addEventListener('click', handleTransfer);
 btnLoan.addEventListener('click', handleLoan);
+btnClose.addEventListener('click', handleCloseAccount);
