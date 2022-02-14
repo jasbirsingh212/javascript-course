@@ -86,22 +86,45 @@ const displayMovements = movements => {
       i + 1
     } ${type}</div>
       <div class="movements__date">3 days ago</div>
-      <div class="movements__value">${mov}</div>
+      <div class="movements__value">${mov}€</div>
     </div>`;
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
 
+const arrSum = (arr) => {
+
+  return arr.reduce((acc, cur) => acc + cur);
+}
+
 const calDisplayBalance = (arr) => {
 
-  const balance = arr.reduce((acc, cur) => acc + cur);
-  labelBalance.textContent = balance;
+  const balance = arrSum(arr);
+  labelBalance.textContent = `${balance}€`;
+
+}
+
+
+
+const calDisplaySummary = (arr) => {
+
+  const deposits = arr.filter((item) => item  > 0);
+  const withdrawal = arr.filter((item) => item < 0);
+  
+  const depositSum = arrSum(deposits);
+  const withdrawalSum = arrSum(withdrawal);
+  const interestSum = arrSum(deposits.map((item) => (item * 1.2) / 100));
+
+  labelSumIn.textContent = `${depositSum}€`
+  labelSumOut.textContent = `${Math.abs(withdrawalSum)}€`
+  labelSumInterest.textContent = `${Math.trunc(interestSum)}€`
 
 }
 
 displayMovements(account1.movements);
 calDisplayBalance(account1.movements);
+calDisplaySummary(account1.movements);
 
 
 const createUserNames = arr => {
