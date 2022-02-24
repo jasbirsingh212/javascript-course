@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use strict';
 
 /////////////////////////////////////////////////
@@ -251,3 +252,17 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+// checking type coercion
+console.log(Math.sqrt('25'))
+console.log(Math.trunc('25.4'))
+//cube root 
+console.log(Math.cbrt(8))
+//checking parsing
+console.log(Math.min('2px', 23))
+
+//internationalization
+const number = new Intl.NumberFormat('en-IN').format(20000000000000);
+console.log(number)
+
+console.log(navigator)
