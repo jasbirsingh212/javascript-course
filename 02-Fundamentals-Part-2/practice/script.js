@@ -90,3 +90,38 @@ function boo(){
 }
 // console.log(foo(10));
 // console.log(boo(10))
+
+ const arr = [1, 2, 4, 5];
+// //arr=[1,2];//error
+// console.log(arr.push(6));//[1,2,4,5,6]
+// console.log(arr.unshift(3))
+// console.log(arr)
+// console.log(arr.indexOf(5))
+// console.log(arr.includes(2))
+console.log(arr[4])
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    calAge:function(){
+        console.log(this)
+        const abc = () => {
+            console.log(this)
+        }
+        abc()
+    }
+  };
+//console.log(jonas.'last')
+
+//THIS KEYWORD
+console.log(this)
+
+const abc = () => {
+    console.log(this);
+}
+
+//abc()
+//jonas.calAge()
