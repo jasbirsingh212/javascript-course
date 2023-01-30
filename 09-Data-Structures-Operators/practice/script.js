@@ -46,16 +46,17 @@ console.log(newRes, restaurant);
 
 const str = 'under_score';
 
-const arr = str.split("_");
-
+const arr = str.split("_");//['under', 'score]
+console.log(str);
 const firstLetterCap = (str) => {
 
-  return str.replace(str[0], str[0].toUpperCase());
+  return str.replace(str[0], str[0].toUpperCase());//Score
 
 }
 
-const tempStr = firstLetterCap(arr[1]);
+const tempStr = firstLetterCap(arr[1]);//score
 arr[1] = tempStr;
 
 const finalStr = arr.join("");
 console.log(finalStr);
+console.log(arr);
