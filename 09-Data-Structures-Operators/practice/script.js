@@ -10,7 +10,7 @@ const flights =
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  categories: ['Italian', ['Pizzeria'], 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
@@ -34,8 +34,11 @@ const restaurant = {
 //shalow copy
 const newRes = {founder: 'jasbir', ...restaurant};
 restaurant.name = 'lalala';
-console.log(newRes);
+console.log("Name this res",newRes.name);
 newRes.name = 'jasbir';
+// newRes.categories = [];
+//newRes.categories[2] = ['jasb']
+// newRes.openingHours.thu = {};
 console.log(newRes, restaurant);
 
 
@@ -43,16 +46,19 @@ console.log(newRes, restaurant);
 
 const str = 'under_score';
 
-const arr = str.split("_");
-
+const arr = str.split("_");//['under', 'score]
+console.log(str);
 const firstLetterCap = (str) => {
 
-  return str.replace(str[0], str[0].toUpperCase());
+  const ans = str.replace(str[0], str[0].toUpperCase());//Score
+  console.log(str);
+  return ans;
 
 }
 
-const tempStr = firstLetterCap(arr[1]);
+const tempStr = firstLetterCap(arr[1]);//score
 arr[1] = tempStr;
 
 const finalStr = arr.join("");
 console.log(finalStr);
+console.log(arr);
