@@ -50,7 +50,9 @@ const arr = str.split("_");//['under', 'score]
 console.log(str);
 const firstLetterCap = (str) => {
 
-  return str.replace(str[0], str[0].toUpperCase());//Score
+  const ans = str.replace(str[0], str[0].toUpperCase());//Score
+  console.log(str);
+  return ans;
 
 }
 
