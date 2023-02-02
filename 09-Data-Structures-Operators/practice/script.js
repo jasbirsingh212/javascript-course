@@ -125,3 +125,47 @@ const y = {}
 const z = y
 map.set(y, 10);
 console.log(map.get(z))
+
+const obj = {
+  key1: "value1",
+  key2: "value2",
+  key3: "value3",
+}
+
+console.log(Object.entries(obj))
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct 🎉'],
+  [false, 'Try again!'],
+]);
+
+console.log(question.entries());
+
+const rest = new Map();
+const arr1 = [1, 2];
+rest.set(arr1, 'Test');
+rest.set(document.querySelector('h1'), 'Heading');
+console.log(rest);
+console.log(rest.size);
+
+console.log(new Set('Jonas').entries());
+
+for (const [i, el, x] of new Set('Jonas').entries()) {
+  console.log(i, el, x)
+}
+console.log(obj?.key1);
+
+const obj2 = { ...obj }
+console.log(obj2, obj == obj2)
+
+
+let a = 111;
+let b = 999;
+const obj3 = { a: 23, b: 7, c: 14 };
+({ a, b } = obj3);
+console.log(a, b);
