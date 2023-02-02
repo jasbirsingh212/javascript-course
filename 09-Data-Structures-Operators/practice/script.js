@@ -117,4 +117,11 @@ console.log(typeof new String('jonas').slice(1));
 
 console.log(new Array('jonas'));
 console.log(typeof new Array('jonas'));
-console.log( new Array('jonas').slice(0));
+console.log(new Array('jonas').slice(0));
+
+
+const map = new Map();
+const y = {}
+const z = y
+map.set(y, 10);
+console.log(map.get(z))
