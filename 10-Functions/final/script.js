@@ -110,7 +110,7 @@ greeterHey('Steven');
 
 greet('Hello')('Jonas');
 
-// Challenge
+// Challenge // currying
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArr('Hi')('Jonas');

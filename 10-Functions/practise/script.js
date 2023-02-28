@@ -113,3 +113,11 @@ const getEvens = (item) => {
 }
 const evenNumbers = array.filter(getEvens);
 console.log(evenNumbers);
+
+//global scope of var
+if (true) {
+    var x = 10;
+    const y = 15;
+}
+
+console.log(x)
