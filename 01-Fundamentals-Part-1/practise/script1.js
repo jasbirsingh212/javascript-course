@@ -14,24 +14,42 @@
 //if({}) console.log("true array");
 //if([]) console.log("true array");
 
-
 //Difference Between let const var
-'use strict'
+"use strict";
 // var a = 10;
 // var a = 30;
 
 function func() {
-    var a = 20;
-    console.log(a);
+  var a = 20;
+  console.log(a);
 }
 
-func()
+func();
 //console.log(a);
-
 
 // var a = 10;
 // let a = 20;
 
 console.log(`jasbir
 singh
-men`)
+men`);
+
+console.log(Number("a")); //NaN
+
+console.log(typeof (1 && "1"));
+
+// if (!5 + 6) {
+//   console.log("jasbir coder");
+// } will print msg
+
+// if (!5 + 0) {
+//   console.log("jasbir coder");
+// }will not print msg
+
+// if (!0 + 0) {
+//   console.log("jasbir coder");
+// } will print msg
+
+//true will be converted to 1
+//false will be converted to 0
+console.log(true + true) // 2
