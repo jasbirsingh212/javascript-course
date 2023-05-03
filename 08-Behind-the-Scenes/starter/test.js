@@ -4,13 +4,13 @@
 // // // // // //     let a = 1;
 
 // // // // // //     // if(true){
-// // // // // //     //     const c = 10                     
+// // // // // //     //     const c = 10
 // // // // // //     // }
 
 // // // // // //     //console.log(c)
 // // // // // //    return  function second(){
 // // // // // //         console.log("Previous",a)
-// // // // // //         return a+=1; 
+// // // // // //         return a+=1;
 // // // // // //     }
 // // // // // // }
 
@@ -43,7 +43,6 @@
 // // // // // var firstName = "jasbir"
 // // // // // first()
 
-
 // // // //  console.log(x); // undefined, But no error like x is not defined or can not find x
 // // // //  var x  = 5;
 // // // //  console.log(x)
@@ -54,23 +53,22 @@
 // // // // console.log(x); // Cannot access 'x' before initialization
 // // // // const x  = 5;
 
- const Obj = {
-    name: "jasbir",
-    age: 23,
-    // @ts-ignore
-     str: ()  =>  {
+const Obj = {
+  name: 'jasbir',
+  age: 23,
+  // @ts-ignore
+  str: () => {
+    console.log(this);
+    return `${this.name}, ${this.age}`;
+  },
+};
 
-        console.log(this)
-         return  `${this.name}, ${this.age}`
-        }
- }
-
-console.log(Obj.str())
+console.log(Obj.str());
 // // 'use strict'
 
-// // // function x () { 
+// // // function x () {
 // // //     console.log(this)
-// // // } 
+// // // }
 
 // // // x()
 
@@ -93,5 +91,5 @@ console.log(Obj.str())
 // // // x()
 
 // 'use strict'
-// const x = ( ) => console.log(this)
-// x()
+const x = () => console.log(this);
+x();
