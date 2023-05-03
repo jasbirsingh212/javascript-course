@@ -31,17 +31,18 @@
 // }
 // console.log("iojsdsicnjisjcnwc")
 
-function first() {
-  console.log(firstName); // undefined
-  if (true) {
-    var firstName = 5;
-    console.log(firstName); // 5
-  }
-  console.log(firstName); //5
-}
+// function first() {
+//   console.log(firstName); // undefined
+//    if (true) {
+//    //console.log(firstName)
+//     var firstName = 5;
+//     console.log(firstName); // 5
+//   }
+//   console.log(firstName); //5
+// }
 
-let firstName = 'jasbir';
-first();
+// let firstName = 'jasbir';
+// first();
 // let firstName = 'jasbir';
 
 //  console.log(x); // undefined, But no error like x is not defined or can not find x
@@ -54,17 +55,17 @@ first();
 // console.log(x); // Cannot access 'x' before initialization
 // const x  = 5;
 
-// const Obj = {
-//   name: 'jasbir',
-//   age: 23,
-//   // @ts-ignore
-//   str: () => {
-//     console.log(this);
-//     return `${this.name}, ${this.age}`;
-//   },
-// };
+const Obj = {
+  name: 'jasbir',
+  age: 23,
+  // @ts-ignore
+  str: () => {
+    console.log(this);
+    return `${this.name}, ${this.age}`;
+  },
+};
 
-// console.log(Obj.str());
+console.log(Obj.str());
 // //'use strict'
 
 // function x () {
@@ -83,7 +84,7 @@ first();
 //   console.log(this)
 // }
 
-// first()
+//  first()
 
 // const x  = function () {
 //     console.log(this)
@@ -94,3 +95,11 @@ first();
 // //'use strict'
 // const x = () => console.log(this);
 // x();
+
+// if (true) {
+//    function add() {
+//       console.log("add function")
+//    }
+// }
+
+// add();
