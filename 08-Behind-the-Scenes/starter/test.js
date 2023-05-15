@@ -103,3 +103,26 @@ console.log(Obj.str());
 // }
 
 // add();
+
+
+function add() {
+  var c = "c";
+  console.log(c); // "c"
+  if (true) {
+    var c = "d";
+  }
+
+  console.log(c) //"d"
+}
+
+
+function add() {
+  let c = 'c';
+  console.log(c); // "c"
+  if (true) {
+    let c = 'd';
+  }
+
+  console.log(c); //"d"
+}
+add()
