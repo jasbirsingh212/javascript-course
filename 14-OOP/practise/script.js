@@ -33,3 +33,4 @@ Person.prototype.displayFullName = function () {
 const jasbir = new Person('Jasbire24232', 'Singh');
 console.log(jasbir);
 jasbir.displayFullName();
+console.log(jasbir.__proto__);
