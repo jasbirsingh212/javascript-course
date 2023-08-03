@@ -26,5 +26,10 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
+Person.prototype.displayFullName = function () {
+  console.log(`${this.firstName} ${this.lastName} `);
+};
+
 const jasbir = new Person('Jasbire24232', 'Singh');
 console.log(jasbir);
+jasbir.displayFullName();
