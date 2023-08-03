@@ -4,10 +4,19 @@
 //we can name it using first letter as small
 // do not create methods in CF due to performance issue
 
-const Person = function (firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-};
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+
+// const Person = function (firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+// };
 
 const jasbir = new Person('Jasbir', 'Singh');
+jasbir.age = 25;
+jasbir.firstName = 'Jassi';
 console.log(jasbir);
