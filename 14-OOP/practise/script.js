@@ -21,16 +21,17 @@
 // jasbir.firstName = 'Jassi';
 // console.log(jasbir);
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-}
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+// }
 
-Person.prototype.displayFullName = function () {
-  console.log(`${this.firstName} ${this.lastName} `);
-};
+// Person.prototype.displayFullName = function () {
+//   console.log(`${this.firstName} ${this.lastName} `);
+// };
 
-const jasbir = new Person('Jasbire24232', 'Singh');
-console.log(jasbir);
-jasbir.displayFullName();
-console.log(jasbir.__proto__);
+// const jasbir = new Person('Jasbire24232', 'Singh');
+// console.log(jasbir);
+// jasbir.displayFullName();
+// console.log(jasbir.__proto__);
+// console.log(Person.prototype);
