@@ -35,3 +35,31 @@
 // jasbir.displayFullName();
 // console.log(jasbir.__proto__);
 // console.log(Person.prototype);
+
+const Car = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
+};
+
+Car.prototype.accelerate = function () {
+  this.speed += 10;
+  console.log(`Accelerated ${this.make} Speed: ${this.speed},`);
+};
+
+Car.prototype.break = function () {
+  this.speed -= 5;
+  console.log(`De-accelerated ${this.make} Speed: ${this.speed},`);
+};
+
+const car1 = new Car('BMW', 100);
+const car2 = new Car('Mercedes', 150);
+
+car1.accelerate();
+car1.accelerate();
+car1.break();
+car1.break();
+
+car2.accelerate();
+car2.accelerate();
+car2.break();
+car2.break();
