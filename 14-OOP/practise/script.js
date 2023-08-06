@@ -69,3 +69,21 @@ car2.accelerate();
 car2.accelerate();
 car2.break();
 car2.break();
+
+//Setter and Getter
+class PersonCl {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  set firstName(name) {
+    this._firstName = name;
+    return this;
+  }
+}
+
+const jasbirCl = new PersonCl('Jasbir', 'Singh');
+//const obj = (jasbirCl.firstName = 'jbshhhhhhhh');
+console.log((jasbirCl.firstName = 'jasjsjbsjbs'));
+console.log(jasbirCl);
