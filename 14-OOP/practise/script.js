@@ -51,6 +51,12 @@ Car.prototype.break = function () {
   console.log(`De-accelerated ${this.make} Speed: ${this.speed},`);
 };
 
+// Car.prototype.break = () => {
+//   //console.log(this);
+//   this.speed -= 5;
+//   console.log(`De-accelerated ${this.make} Speed: ${this.speed},`);
+// };
+
 const car1 = new Car('BMW', 100);
 const car2 = new Car('Mercedes', 150);
 
