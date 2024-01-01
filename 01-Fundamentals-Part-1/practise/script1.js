@@ -36,7 +36,7 @@ men`);
 
 console.log(Number("a")); //NaN
 
-console.log(typeof (1 && "1"));
+console.log(typeof (1 && "1")); //string
 
 // if (!5 + 6) {
 //   console.log("jasbir coder");
@@ -52,4 +52,4 @@ console.log(typeof (1 && "1"));
 
 //true will be converted to 1
 //false will be converted to 0
-console.log(true + true) // 2
+console.log(true + true); // 2
