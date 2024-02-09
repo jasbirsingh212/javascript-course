@@ -54,3 +54,15 @@ if (markHasHigherBMI) {
     `John's BMI (${johnsBMI}) is higher than Mark's BMI (${marksBMI})`
   );
 }
+
+//=============================================================================================================
+
+//Assignment 4
+
+const bill = 275;
+
+const tip = bill * (bill >= 50 && bill <= 300 ? 0.15 : 0.2);
+
+const finalBill = bill + tip;
+
+console.log(finalBill, bill, tip);
