@@ -1,6 +1,8 @@
 // //alert("jassi");
 // //console.log("Hello World !")
+//==============================================================================================================
 
+//Assignment 3
 // const dolphineScore1 = 96 ;
 // const dolphineScore2 = 108;
 // const dolphineScore3 = 89;
@@ -41,3 +43,14 @@ const markHasHigherBMI = marksBMI > johnsBMI;
 console.log(markHasHigherBMI, marksBMI, johnsBMI);
 
 //===================================================================================================================
+//Assignmnet - 2
+
+if (markHasHigherBMI) {
+  console.log(
+    `Mark's BMI (${marksBMI}) is higher than John's BMI (${johnsBMI})`
+  );
+} else {
+  console.log(
+    `John's BMI (${johnsBMI}) is higher than Mark's BMI (${marksBMI})`
+  );
+}
