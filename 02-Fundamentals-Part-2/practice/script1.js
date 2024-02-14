@@ -57,3 +57,20 @@ const yearUntilRetirement = (birthYear, firstName) => {
 };
 
 console.log(yearUntilRetirement(1998, "Jasbir"));
+
+// ==============================================================================================================
+
+function cutFruit(fruit) {
+  return fruit * 4;
+}
+
+function juiceWithPieces(apples, oranges) {
+  const applePieces = cutFruit(apples);
+  const orangePieces = cutFruit(oranges);
+
+  return `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`;
+}
+
+console.log(juiceWithPieces(2, 3));
+
+// ===========================================================================================================
