@@ -31,3 +31,17 @@ console.log(Number("23"));
 console.log(Math.random());
 
 //=========================================================================================================
+
+function calAge(birthYear) {
+  return 2024 - birthYear;
+}
+
+console.log(calAge(1998));
+
+const calAge1 = function (birthYear) {
+  return 2024 - birthYear;
+};
+
+console.log(calAge1(1998));
+
+//==============================================================================================================
