@@ -45,3 +45,15 @@ const calAge1 = function (birthYear) {
 console.log(calAge1(1998));
 
 //==============================================================================================================
+
+const calAgeArrow = (birthYear) => 2024 - birthYear;
+
+console.log(calAge(1998));
+
+const yearUntilRetirement = (birthYear, firstName) => {
+  const age = calAge(birthYear);
+  const retirementYears = 65 - age;
+  return `${firstName} will retire after ${retirementYears} years.`;
+};
+
+console.log(yearUntilRetirement(1998, "Jasbir"));
