@@ -74,3 +74,22 @@ function juiceWithPieces(apples, oranges) {
 console.log(juiceWithPieces(2, 3));
 
 // ===========================================================================================================
+
+//#coding challenge 1
+
+const calAvg = (score1, score2, score3) => {
+  return (score1 + score2 + score3) / 3;
+};
+
+const checkWinner = (aAvgScore, bAvgScore) => {
+  if (aAvgScore >= 2 * bAvgScore) {
+    console.log(`Team A wins (${aAvgScore} vs ${bAvgScore})`);
+  } else if (2 * aAvgScore <= bAvgScore) {
+    console.log(`Team B wins (${bAvgScore} vs ${aAvgScore})`);
+  }
+};
+
+const teamAScoreAvg = calAvg(85, 54, 41);
+const teamBScoreAvg = calAvg(23, 34, 27);
+console.log(teamAScoreAvg, teamBScoreAvg);
+checkWinner(teamAScoreAvg, teamBScoreAvg);
