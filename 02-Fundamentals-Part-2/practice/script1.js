@@ -110,3 +110,14 @@ const bills = [125, 555, 44];
 const tips = [calTip(bills[0]), calTip(bills[1]), calTip(bills[2])];
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(tips, total);
+
+// =========================================================================================================
+
+const jasbirObj = {
+  firstName: "Jasbir",
+  lastName: "Singh",
+  friends: ["khargosh", "lovely", "chuchi"],
+};
+
+console.log(`${jasbirObj.firstName} has ${jasbirObj.friends.length} friends, but ${jasbirObj.friends[0]} is 
+his best friend.`);
