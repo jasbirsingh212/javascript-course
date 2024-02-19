@@ -121,3 +121,30 @@ const jasbirObj = {
 
 console.log(`${jasbirObj.firstName} has ${jasbirObj.friends.length} friends, but ${jasbirObj.friends[0]} is 
 his best friend.`);
+
+//===========================================================================================================
+
+//#coding challenge 3
+
+const calBMI = function () {
+  console.log(this);
+  this.BMI = this.massInKg / this.heightInMeter ** 2;
+  return this.BMI;
+};
+
+const mark = {
+  fullName: "Mark Miller",
+  massInKg: 78,
+  heightInMeter: 1.69,
+  calBMI: calBMI,
+};
+
+const jonas = {
+  fullName: "Jonas Smith",
+  massInKg: 92,
+  heightInMeter: 1.95,
+  calBMI: calBMI,
+};
+
+console.log(mark.calBMI());
+console.log(jonas.calBMI());
