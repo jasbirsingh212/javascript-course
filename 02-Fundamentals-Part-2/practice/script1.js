@@ -148,3 +148,31 @@ const jonas = {
 
 console.log(mark.calBMI());
 console.log(jonas.calBMI());
+
+// ========================================================================================================
+
+//# coding challenge 4
+
+const bills1 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips1 = [];
+const total1 = [];
+
+for (let i = 0; i < bills1.length; i++) {
+  tips1[i] = calTip(bills1[i]);
+  total1[i] = tips1[i] + bills1[i];
+}
+
+console.log(bills1, tips1, total1);
+
+const calAverage = (arr) => {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+
+  return sum / arr.length;
+};
+
+console.log(calAverage(total1));
+console.log(calAverage(tips1));
