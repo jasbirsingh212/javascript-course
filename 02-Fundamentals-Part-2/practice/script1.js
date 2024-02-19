@@ -93,3 +93,9 @@ const teamAScoreAvg = calAvg(85, 54, 41);
 const teamBScoreAvg = calAvg(23, 34, 27);
 console.log(teamAScoreAvg, teamBScoreAvg);
 checkWinner(teamAScoreAvg, teamBScoreAvg);
+
+//==========================================================================================================
+
+const arr = ["A", "B", "C", "D", 23];
+console.log(arr.indexOf("23"));
+console.log(arr.indexOf("d"));
