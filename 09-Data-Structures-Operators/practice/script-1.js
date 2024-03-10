@@ -11,6 +11,8 @@ console.log(x, y);
 //=================================================
 
 //Destructuring Objects
-const obj = { firstName: 'Jabsir', lastName: 'Singh' };
-const { firstName = 'guest', lastName = 'xyz' } = obj;
-const { firstName: main, lastName: secondary } = obj;
+// const obj = { firstName: 'Jabsir', lastName: 'Singh' };
+//const { firstName = 'guest', lastName = 'xyz' } = obj;
+// const { firstName: main, lastName: secondary } = obj;
+// const { firstName: main = 'Jasbir1', lastName: secondary = 'Singh1' } = {};
+// console.log(main, secondary);
