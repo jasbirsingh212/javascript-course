@@ -224,7 +224,7 @@ const handleCloseAccount = e => {
     accounts.splice(isExistsIndex, 1);
   }
 
-  console.log(accounts)
+  console.log(accounts);
   // @ts-ignore
   inputClosePin.value = inputCloseUsername.value = '';
 };
@@ -233,3 +233,46 @@ btnLogin.addEventListener('click', handleLogin);
 btnTransfer.addEventListener('click', handleTransfer);
 btnLoan.addEventListener('click', handleLoan);
 btnClose.addEventListener('click', handleCloseAccount);
+
+//-------------------------------------------------------------------------
+
+const chunkCreator = (arr = [], chunk = 0) => {
+  const answer = [];
+
+  for (let i = 0; i < arr.length / chunk; i++) {
+    const temp = [];
+
+    for (let j = i * chunk; j < chunk + i * chunk && j < arr.length; j++) {
+      temp.push(arr[j]);
+    }
+
+    answer.push(temp);
+  }
+
+  return answer;
+};
+
+//console.log(chunkCreator([1, 2, 3, 4, 5], 6));
+
+//------------------------------------------------------------------------------
+
+const stairs = (n, i, j, answer) => {
+  if (i === n) return;
+
+  if (j === n) {
+    console.log(answer);
+    return;
+  }
+
+  const newAns = answer + (j <= i ? '#' : ' ');
+
+  if (j < n) {
+    stairs(n, i, j + 1, newAns);
+  }
+
+  if (j === 0) {
+    stairs(n, i + 1, j, '');
+  }
+};
+
+stairs(3, 0, 0, '');

@@ -30,45 +30,40 @@ const restaurant = {
   },
 };
 
-
 //shalow copy
-const newRes = {founder: 'jasbir', ...restaurant};
+const newRes = { founder: 'jasbir', ...restaurant };
 restaurant.name = 'lalala';
-console.log("Name this res",newRes.name);
+console.log('Name this res', newRes.name);
 newRes.name = 'jasbir';
 // newRes.categories = [];
 //newRes.categories[2] = ['jasb']
 // newRes.openingHours.thu = {};
 console.log(newRes, restaurant);
 
-
 //coding challenge 3
 
 const str = 'under_score';
 
-const arr = str.split("_");//['under', 'score]
+const arr = str.split('_'); //['under', 'score]
 console.log(str);
-const firstLetterCap = (str) => {
-
-  const ans = str.replace(str[0], str[0].toUpperCase());//Score
+const firstLetterCap = str => {
+  const ans = str.replace(str[0], str[0].toUpperCase()); //Score
   console.log(str);
   return ans;
+};
 
-}
-
-const tempStr = firstLetterCap(arr[1]);//score
+const tempStr = firstLetterCap(arr[1]); //score
 arr[1] = tempStr;
 
-const finalStr = arr.join("");
+const finalStr = arr.join('');
 console.log(finalStr);
 console.log(arr);
 
-
-const str1 = "jasbir";
-console.log(str1.padStart(10, "X"));
+const str1 = 'jasbir';
+console.log(str1.padStart(10, 'X'));
 // str1.trim();
-console.log(str1.trim())
-console.log(str1.repeat(2), str1)
+console.log(str1.trim());
+console.log(str1.repeat(2), str1);
 
 const announcement =
   'All passengers come to boarding door 23. Boarding door 23!';
@@ -76,7 +71,7 @@ const announcement =
 console.log(announcement.replace('door', 'gate'));
 console.log(announcement.replaceAll('door', 'gate'));
 console.log(announcement.replace(/door/g, 'gate')); // regex
-console.log(announcement)
+console.log(announcement);
 
 const checkBaggage = function (items) {
   const baggage = items.toLowerCase();
@@ -92,7 +87,6 @@ checkBaggage('I have a laptop, some Food and a pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and a gun for protection');
 console.log('B737'[0]);
-
 
 const airline = 'TAP Air Portugal';
 const plane = 'A320';
@@ -119,20 +113,19 @@ console.log(new Array('jonas'));
 console.log(typeof new Array('jonas'));
 console.log(new Array('jonas').slice(0));
 
-
 const map = new Map();
-const y = {}
-const z = y
+const y = {};
+const z = y;
 map.set(y, 10);
-console.log(map.get(z))
+console.log(map.get(z));
 
 const obj = {
-  key1: "value1",
-  key2: "value2",
-  key3: "value3",
-}
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
+};
 
-console.log(Object.entries(obj))
+console.log(Object.entries(obj));
 
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
@@ -156,16 +149,19 @@ console.log(rest.size);
 console.log(new Set('Jonas').entries());
 
 for (const [i, el, x] of new Set('Jonas').entries()) {
-  console.log(i, el, x)
+  console.log(i, el, x);
 }
 console.log(obj?.key1);
 
-const obj2 = { ...obj }
-console.log(obj2, obj == obj2)
-
+const obj2 = { ...obj };
+console.log(obj2, obj == obj2);
 
 let a = 111;
 let b = 999;
 const obj3 = { a: 23, b: 7, c: 14 };
 ({ a, b } = obj3);
 console.log(a, b);
+
+const arrE = [1, 2];
+const [ae, be, ...restE] = arrE;
+console.log(ae, be, restE); // restE will always be array if destructing from array otherwise object
