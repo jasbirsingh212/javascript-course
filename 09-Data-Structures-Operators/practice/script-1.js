@@ -9,3 +9,8 @@ console.log(x, y);
 console.log(x, y);
 
 //=================================================
+
+//Destructuring Objects
+const obj = { firstName: 'Jabsir', lastName: 'Singh' };
+const { firstName = 'guest', lastName = 'xyz' } = obj;
+const { firstName: main, lastName: secondary } = obj;
