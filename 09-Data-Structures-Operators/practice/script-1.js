@@ -128,9 +128,9 @@ const game = {
   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
   date: 'Nov 9th, 2037',
   odds: {
-    team1: 1.33,
+    team1: 2.33,
     x: 3.25,
-    team2: 6.5,
+    team2: 1.5,
   },
 };
 
@@ -148,3 +148,29 @@ console.log(gk2, fieldPlayers2);
 //3
 const allPlayers = [...players1, players2];
 console.log(allPlayers);
+
+//4
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(players1Final);
+
+//5
+const { team1, x: draw, team2 } = game.odds;
+console.log(team1, draw, team2);
+
+//6
+const printGoal = (...players) => {
+  for (const name of players) {
+    console.log(name);
+  }
+
+  console.log('Goal Socred : ', players.length);
+};
+
+printGoal('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+printGoal(...game.scored);
+
+//7
+console.log(
+  (team1 < team2 && 'Team 1 wins') || (team1 > team2 && 'Team 2 wins')
+);
+//console.log(team1 > team2 && 'Team 2 wins');
