@@ -174,3 +174,13 @@ console.log(
   (team1 < team2 && 'Team 1 wins') || (team1 > team2 && 'Team 2 wins')
 );
 //console.log(team1 > team2 && 'Team 2 wins');
+
+//=======================================================================
+
+// for (const key in game) {
+//   console.log(key);
+// }
+
+// for (const item of Object.entries(game)) {
+//   console.log(item);
+// }
