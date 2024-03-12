@@ -184,3 +184,37 @@ console.log(
 // for (const item of Object.entries(game)) {
 //   console.log(item);
 // }
+
+//=====================================================
+
+//coding challenge 2
+
+// 1
+
+for (const [i, name] of game.scored.entries()) {
+  console.log(`Goal ${i + 1} : ${name}`);
+}
+
+// 2
+let sum = 0;
+const oddValues = Object.values(game.odds);
+for (const item of oddValues) {
+  sum += item;
+}
+console.log(sum / oddValues.length);
+
+// 3
+
+const enteriesArr = Object.entries(game.odds);
+for (const [key, value] of enteriesArr) {
+  console.log(
+    `Odd of ${game[key] ? `victory ${game[key]}` : 'draw'} : ${value}`
+  );
+}
+
+//4
+const ansObj = {};
+for (const name of game.scored) {
+  ansObj[name] = ansObj[name] ? ansObj[name] + 1 : 1;
+}
+console.log(ansObj);
