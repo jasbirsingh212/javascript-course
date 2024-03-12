@@ -215,6 +215,7 @@ for (const [key, value] of enteriesArr) {
 //4
 const ansObj = {};
 for (const name of game.scored) {
-  ansObj[name] = ansObj[name] ? ansObj[name] + 1 : 1;
+  // ansObj[name] = ansObj[name] ? ansObj[name] + 1 : 1;
+  ansObj[name] = ansObj[name] + 1 || 1;
 }
 console.log(ansObj);
