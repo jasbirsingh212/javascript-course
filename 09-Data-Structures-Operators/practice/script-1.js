@@ -299,3 +299,24 @@ console.log(str.slice(3, -3));
 
 //replaceAll
 console.log(str.replaceAll('i', 'e'));
+
+// coding challenge 4
+const arr = [
+  'underscore_case',
+  'first_name',
+  'Some_Variable',
+  'calculate_AGE',
+  ' delayed_departure',
+];
+
+const answerArray = arr.map((str, index) => {
+  const tempArr = str.split('_');
+  const tempStr = `${tempArr[0].toLowerCase()}${tempArr[1].replace(
+    tempArr[1][0],
+    tempArr[1][0].toUpperCase()
+  )}  ${`✅`.repeat(index + 1)}`;
+
+  return tempStr;
+});
+
+console.log(answerArray);
