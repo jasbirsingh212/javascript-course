@@ -296,3 +296,6 @@ const strSliced = str.slice(0, 3);
 console.log(strSliced, str); // does not affect original string
 console.log(str.slice(-2));
 console.log(str.slice(3, -3));
+
+//replaceAll
+console.log(str.replaceAll('i', 'e'));
