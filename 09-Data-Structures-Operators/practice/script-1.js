@@ -219,3 +219,28 @@ for (const name of game.scored) {
   ansObj[name] = ansObj[name] + 1 || 1;
 }
 console.log(ansObj);
+
+// Sets
+
+const uniqueElements = new Set([1, 2, 3, 1, 2, 4, 5, 4, 6]);
+console.log(uniqueElements);
+
+const uniqueCharacters = new Set('Jasbir Singh');
+console.log(uniqueCharacters);
+
+const newSet = new Set();
+newSet.add('1');
+newSet.add('2');
+newSet.add('3');
+newSet.add('2');
+newSet.add('3');
+newSet.add('1');
+
+console.log(newSet);
+newSet.delete('1');
+console.log(newSet);
+console.log(newSet.has('2'));
+console.log(newSet.has('1'));
+console.log(newSet.size);
+newSet.clear(); //does not return anything
+console.log(newSet);
