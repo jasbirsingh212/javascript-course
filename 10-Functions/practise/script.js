@@ -1,6 +1,5 @@
 'use strict';
 
-
 //------------- In Normal Function -----------------------------------------
 
 //with strict mode;
@@ -15,8 +14,6 @@
 // }
 // testThis();
 
-
-
 //with strict mode;
 //// In browser: undefined;
 // In node-runtime: undefined;
@@ -29,8 +26,6 @@
 //     console.log(this);
 // }
 // thisFunc();
-
-
 
 //with strict mode;
 //In browser: window object;
@@ -47,8 +42,6 @@
 // testThisArrow()
 
 //-------------------------------------------------------------------------
-
-
 
 //----------- In Methods Calls -------------------
 
@@ -69,7 +62,6 @@
 
 // objectTest.intro();
 
-
 //with strict mode;
 //In browser: To the object calling the method;
 // In node run-time: To the object calling the method;
@@ -86,7 +78,6 @@
 // }
 
 // objectTest.intro();
-
 
 //with strict mode;
 //In browser: window object;
@@ -105,19 +96,37 @@
 
 // objectTest.intro();
 
-
-const array = [1,2,3,4,5,6];
-const getEvens = (item) => {
-
-    return item % 2 === 0 ? item : null;
-}
+const array = [1, 2, 3, 4, 5, 6];
+const getEvens = item => {
+  return item % 2 === 0 ? item : null;
+};
 const evenNumbers = array.filter(getEvens);
 console.log(evenNumbers);
 
 //global scope of var
 if (true) {
-    var x = 10;
-    const y = 15;
+  var x = 10;
+  const y = 15;
 }
 
-console.log(x)
+console.log(x);
+
+//=================================================================================================
+
+//Passing values to function as arguments or parameteres
+const jasbir = {
+  full_name: 'Jasbir Singh',
+  age: 26,
+};
+
+const msg = 'Hello';
+
+const printMsg = (user, greetMsg) => {
+  user.age = 22;
+  console.log(greetMsg);
+  greetMsg = 'jnsknsknskn';
+};
+
+printMsg(jasbir, msg);
+console.log(jasbir, msg); // age in this obj changes, because object are passed as reference
+// but javascript is only pass by value there nothing like pass by reference in javascript
