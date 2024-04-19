@@ -181,7 +181,7 @@ const poll = {
 
     if (!(userAnswer >= 0 && userAnswer <= 3)) {
       alert('You must enter correct options');
-      //registerNewAnswer();
+      registerNewAnswer.call(this);
       return;
     }
 
