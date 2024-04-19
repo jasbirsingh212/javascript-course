@@ -130,3 +130,32 @@ const printMsg = (user, greetMsg) => {
 printMsg(jasbir, msg);
 console.log(jasbir, msg); // age in this obj changes, because object are passed as reference
 // but javascript is only pass by value there nothing like pass by reference in javascript
+
+//============================================================================================
+// Function Accepting Callback Functions
+
+//=============================================================================================
+//Call, Bind and Apply Methods
+
+const user1 = {
+  name: 'Jasbir',
+  age: 26,
+  intro() {
+    console.log(`User with name: ${this.name} is ${this.age} years old.`);
+  },
+};
+
+user1.intro();
+
+const user2 = {
+  name: 'malkit',
+  age: 25,
+};
+
+const intro = user1.intro;
+
+intro.call(user2);
+
+const intro1 = intro.bind(user1);
+intro1();
+//============================================================================================
