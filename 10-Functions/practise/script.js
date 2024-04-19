@@ -159,3 +159,78 @@ intro.call(user2);
 const intro1 = intro.bind(user1);
 intro1();
 //============================================================================================
+//Coding challenge 1
+
+const poll = {
+  question: 'What is your favourite programming language?',
+  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+  // This generates [0, 0, 0, 0]. More in the next section!
+  answers: new Array(4).fill(0),
+  registerNewAnswer() {
+    const { question, options, answers, displayResults, registerNewAnswer } =
+      this;
+
+    const userAnswer = Number(
+      prompt(`${question}
+     ${options[0]}
+     ${options[1]}
+     ${options[2]}
+     ${options[3]}
+    `)
+    );
+
+    if (!(userAnswer >= 0 && userAnswer <= 3)) {
+      alert('You must enter correct options');
+      //registerNewAnswer();
+      return;
+    }
+
+    answers[userAnswer] += 1;
+
+    displayResults.call(this, 'arr');
+    displayResults.call(this, 'string');
+  },
+
+  displayResults(type) {
+    const { answers } = this;
+
+    if (type === 'string') {
+      console.log(
+        `Poll answer in String format : ${answers[0]},${answers[1]}, ${answers[2]}, ${answers[3]} `
+      );
+    } else {
+      console.log('Poll Answer is: ', answers);
+    }
+  },
+};
+
+//const { question, options, answers } = poll;
+
+// const registerNewAnswer = () => {
+//   const userAnswer = Number(
+//     prompt(`${question}
+//    ${options[0]}
+//    ${options[1]}
+//    ${options[2]}
+//    ${options[3]}
+//   `)
+//   );
+
+//   if (!(userAnswer >= 0 && userAnswer <= 3)) {
+//     alert('You must enter correct options');
+//     registerNewAnswer();
+//     return;
+//   }
+
+//   answers[userAnswer] += 1;
+
+//   console.log('Answer Arr', answers);
+//   console.log('Poll Obj', poll);
+// };
+
+//registerNewAnswer();
+// console.log('Answer Arr', answers);
+// console.log('Poll Obj', poll);
+
+const btnPoll = document.querySelector('.poll');
+btnPoll.addEventListener('click', poll.registerNewAnswer.bind(poll));
