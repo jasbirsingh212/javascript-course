@@ -196,7 +196,8 @@ const poll = {
 
     if (type === 'string') {
       console.log(
-        `Poll answer in String format : ${answers[0]},${answers[1]}, ${answers[2]}, ${answers[3]} `
+        // `Poll answer in String format : ${answers[0]},${answers[1]}, ${answers[2]}, ${answers[3]} `
+        `Poll answer in String format : ${answers.join(', ')} `
       );
     } else {
       console.log('Poll Answer is: ', answers);
