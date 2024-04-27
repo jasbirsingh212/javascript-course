@@ -235,3 +235,32 @@ const poll = {
 
 const btnPoll = document.querySelector('.poll');
 btnPoll.addEventListener('click', poll.registerNewAnswer.bind(poll));
+
+//===========================================================================
+
+//Coding challenge 2
+
+// (function () {
+//   const header = document.querySelector('h1');
+//   header.style.color = 'red';
+
+//   document
+//     .querySelector('body')
+//     .addEventListener('click', () => (header.style.color = 'blue'));
+// })();
+
+//Parent Scope - Global context
+// const handleClick = () => {
+//   header.style.color = 'blue';
+// };
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  const handleClick = () => {
+    header.style.color = 'blue';
+  };
+
+  document.querySelector('body').addEventListener('click', handleClick);
+})();
