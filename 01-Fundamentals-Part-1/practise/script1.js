@@ -11,7 +11,7 @@
 // console.log(`${populationOfMyContry} millions`);
 
 // truthy and falsy values
-//if({}) console.log("true array");
+//if({}) console.log("true object");
 //if([]) console.log("true array");
 
 //Difference Between let const var
