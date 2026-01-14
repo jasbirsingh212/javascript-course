@@ -53,3 +53,4 @@ console.log(typeof (1 && "1")); //string
 //true will be converted to 1
 //false will be converted to 0
 console.log(true + true); // 2
+//===============================================================================================================
