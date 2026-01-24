@@ -31,6 +31,11 @@
 //===============================================================================================================
 // Assignment 1
 
+// const marksMass = 78;
+// const markHeigth = 1.69; // meters
+// const johnsMass = 92;
+// const johnsHeigth = 1.95;
+
 const marksMass = 95;
 const markHeigth = 1.88;
 const marksBMI = marksMass / (markHeigth * markHeigth);
@@ -47,11 +52,11 @@ console.log(markHasHigherBMI, marksBMI, johnsBMI);
 
 if (markHasHigherBMI) {
   console.log(
-    `Mark's BMI (${marksBMI}) is higher than John's BMI (${johnsBMI})`
+    `Mark's BMI (${marksBMI}) is higher than John's BMI (${johnsBMI})`,
   );
 } else {
   console.log(
-    `John's BMI (${johnsBMI}) is higher than Mark's BMI (${marksBMI})`
+    `John's BMI (${johnsBMI}) is higher than Mark's BMI (${marksBMI})`,
   );
 }
 
