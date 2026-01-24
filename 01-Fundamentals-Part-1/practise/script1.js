@@ -58,3 +58,5 @@ console.log(typeof (1 && "1")); //string
 //false will be converted to 0
 console.log(true + true); // 2
 //===============================================================================================================
+
+// alert("Hello World again!");
