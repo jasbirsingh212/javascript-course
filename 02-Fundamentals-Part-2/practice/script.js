@@ -1,5 +1,7 @@
+"use strict";
+// console.log(this);
 //Cutshort assessment
-// console.log("test" && "book");
+//console.log("test" && "book");
 
 //next question
 // const bird = {
@@ -11,7 +13,7 @@
 //   small: true,
 // };
 
-//console.log(mouse.bird.size);
+// console.log(mouse.bird.size);
 // console.log(mouse[bird.size]);
 // console.log(mouse[bird["size"]]);
 
@@ -28,7 +30,7 @@
 
 //   test();
 //   console.log(a);
-// })()
+// })();
 
 //next question
 
@@ -37,8 +39,8 @@
 //   try {
 //     throw new Error();
 //   } catch (x) {
-//     (x = 1), (y = 2);
-//     console.log(x);
+//     ((x = 1), (y = 2));
+//     console.log(x, y);
 //   }
 //   console.log(x);
 //   console.log(y);
@@ -84,8 +86,8 @@
 // console.log(foo(10));
 // console.log(boo(10));
 
-//const arr = [1, 2, 4, 5];
-//arr=[1,2];//error
+// const arr = [1, 2, 4, 5];
+// //arr = [1, 2]; //error
 // console.log(arr.push(6)); //[1,2,4,5,6]
 // console.log(arr.unshift(3));
 // console.log(arr);
@@ -107,9 +109,8 @@
 //     abc();
 //   },
 // };
-//console.log(jonas.'last')
-
-//THIS KEYWORD
+// console.log(jonas.lastName);
+// // THIS KEYWORD
 // console.log(this);
 
 // const abc = () => {
