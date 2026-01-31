@@ -1,5 +1,5 @@
 "use strict";
-// console.log(this);
+console.log(this);
 //Cutshort assessment
 //console.log("test" && "book");
 
