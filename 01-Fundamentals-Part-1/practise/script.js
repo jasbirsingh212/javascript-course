@@ -1,15 +1,15 @@
 // //alert("jassi");
 // //console.log("Hello World !")
+//==============================================================================================================
 
+//Assignment 3
 // const dolphineScore1 = 96 ;
 // const dolphineScore2 = 108;
 // const dolphineScore3 = 89;
 
-
 // const kolalaScore1 = 88 ;
 // const kolalaScore2 = 91;
 // const kolalaScore3 = 110;
-
 
 // const dolphineAvgScore = (dolphineScore1 + dolphineScore2 + dolphineScore3) / 3;
 // const koalasAvgScore = ( kolalaScore1 + kolalaScore2 + kolalaScore3)/3;
@@ -27,3 +27,47 @@
 //     else
 //     console.log(`No winner for this match`)
 // }
+
+//===============================================================================================================
+// Assignment 1
+
+// const marksMass = 78;
+// const markHeigth = 1.69; // meters
+// const johnsMass = 92;
+// const johnsHeigth = 1.95;
+
+const marksMass = 95;
+const markHeigth = 1.88;
+const marksBMI = marksMass / (markHeigth * markHeigth);
+
+const johnsMass = 85;
+const johnsHeigth = 1.76;
+const johnsBMI = johnsMass / (johnsHeigth * johnsHeigth);
+
+const markHasHigherBMI = marksBMI > johnsBMI;
+console.log(markHasHigherBMI, marksBMI, johnsBMI);
+
+//===================================================================================================================
+//Assignmnet - 2
+
+if (markHasHigherBMI) {
+  console.log(
+    `Mark's BMI (${marksBMI}) is higher than John's BMI (${johnsBMI})`,
+  );
+} else {
+  console.log(
+    `John's BMI (${johnsBMI}) is higher than Mark's BMI (${marksBMI})`,
+  );
+}
+
+//=============================================================================================================
+
+//Assignment 4
+
+const bill = 275;
+
+const tip = bill * (bill >= 50 && bill <= 300 ? 0.15 : 0.2);
+
+const finalBill = bill + tip;
+
+console.log(finalBill, bill, tip);
