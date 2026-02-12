@@ -176,3 +176,10 @@ const calAverage = (arr) => {
 
 console.log(calAverage(total1));
 console.log(calAverage(tips1));
+
+//================================
+// const p_tag = document.querySelector(".intro");
+// p_tag.innerHTML = p_tag.textContent.replace(
+//   "Jasbir Singh",
+//   "<strong>Jasbir Singh</strong>",
+// );
