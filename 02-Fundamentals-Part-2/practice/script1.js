@@ -183,3 +183,11 @@ console.log(calAverage(tips1));
 //   "Jasbir Singh",
 //   "<strong>Jasbir Singh</strong>",
 // );
+
+//=================================
+
+// for (var i = 0; i < 5; i++) {
+//   setTimeout(function () {
+//     console.log(i);
+//   }, 1000);
+// }
