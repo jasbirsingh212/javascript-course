@@ -64,7 +64,7 @@ const handleAgainClick = () => {
   bodyColorChange('#222');
   showGuessNumberChange('?');
   displayMessage('Start guessing...');
-  highScore = 0;
+  // highScore = 0;
   score = 20;
   displayHighScore(highScore);
   displayScore(score);
