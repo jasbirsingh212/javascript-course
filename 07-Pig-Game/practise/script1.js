@@ -80,6 +80,18 @@ const removeWinner = () => {
   arrPlayer[1].classList.remove('player--winner');
 };
 
+const handleDisableRollDiceBtn = action => {
+  btnRollDice.disabled = action;
+};
+
+const switchActivePlayer = () => {
+  activePlayer = activePlayer === 0 ? 1 : 0;
+};
+
+const handleDisableHoldBtn = action => {
+  btnHoldScore.disabled = action;
+};
+
 const handleRollDice = () => {
   const diceRolledValue = getDiceRoll();
   setDiceImage(diceRolledValue);
@@ -87,7 +99,8 @@ const handleRollDice = () => {
   if (diceRolledValue === 1) {
     arrPlayerCurrentScore[activePlayer] = 0;
     updateCurrentScore(activePlayer, 0);
-    activePlayer = activePlayer === 0 ? 1 : 0;
+    //activePlayer = activePlayer === 0 ? 1 : 0;
+    switchActivePlayer();
     updateActivePlayer();
   } else {
     updateCurrentScore(activePlayer, diceRolledValue);
@@ -103,8 +116,12 @@ const handleNewGame = () => {
     (arrPlayerScore = [player1Score, player2Score]),
     (rollDice = 0),
     (activePlayer = 0));
-  btnHoldScore.disabled = false;
-  btnRollDice.disabled = false;
+  // btnHoldScore.disabled = false;
+  handleDisableHoldBtn(false);
+
+  // btnRollDice.disabled = false;
+  handleDisableRollDiceBtn(false);
+
   updateActivePlayer();
   removeWinner();
   updateCurrentScore(0, 0);
@@ -117,12 +134,16 @@ const handleHoldScore = () => {
   updateScore(activePlayer);
   if (arrPlayerScore[activePlayer] >= 100) {
     updateWinner(activePlayer);
-    btnHoldScore.disabled = true;
-    btnRollDice.disabled = true;
+    // btnHoldScore.disabled = true;
+    handleDisableHoldBtn(true);
+
+    // btnRollDice.disabled = true;
+    handleDisableRollDiceBtn(true);
     return;
   }
   updateCurrentScore(activePlayer, -arrPlayerCurrentScore[activePlayer]);
-  activePlayer = activePlayer === 0 ? 1 : 0;
+  // activePlayer = activePlayer === 0 ? 1 : 0;
+  switchActivePlayer();
   updateActivePlayer();
 };
 
