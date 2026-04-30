@@ -1,3 +1,4 @@
+'use strict';
 let score = 20,
   highScore = 0,
   guessNumber = 0;
