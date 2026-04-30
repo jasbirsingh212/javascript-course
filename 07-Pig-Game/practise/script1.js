@@ -54,6 +54,10 @@ const setDiceImage = roll => {
   }
 };
 
+const setPlayer1Active = () => player1Section.classList.add('player--active');
+const setPlayer2InActive = () =>
+  player2Section.classList.remove('player--active');
+
 const updateActivePlayer = () => {
   player1Section.classList.toggle('player--active');
   player2Section.classList.toggle('player--active');
@@ -122,7 +126,9 @@ const handleNewGame = () => {
   // btnRollDice.disabled = false;
   handleDisableRollDiceBtn(false);
 
-  updateActivePlayer();
+  // updateActivePlayer();
+  setPlayer1Active();
+  setPlayer2InActive();
   removeWinner();
   updateCurrentScore(0, 0);
   updateCurrentScore(1, 0);
