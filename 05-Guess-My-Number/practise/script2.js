@@ -17,11 +17,20 @@ const displayScore = number => (scoreElement.textContent = number);
 const displayHighScore = number => (highScoreElement.textContent = number);
 const bodyColorChange = color => (bodyElement.style.backgroundColor = color);
 const showGuessNumberChange = number => (showGuessNumber.textContent = number);
-
 const guessNumberFunction = () => Math.trunc(Math.random() * 30) + 1;
+
 guessNumber = guessNumberFunction();
 
 const handleCheckClick = () => {
+  if (score <= 1) {
+    displayMessage('You Lost the Game!');
+    bodyColorChange('red');
+    btnCheck.disabled = true;
+    inputGuessNumber.disabled = true;
+    displayScore(--score);
+    return;
+  }
+
   const userInput = getInputValue();
 
   if (userInput <= 0 || userInput > 30) {
