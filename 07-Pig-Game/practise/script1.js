@@ -29,6 +29,8 @@ const imgDice = getElementByQuery('.dice');
 
 const getDiceRoll = () => Math.trunc(Math.random() * 6) + 1;
 
+const hideImgDiceRoll = () => imgDice.classList.add('hide');
+
 const setDiceImage = roll => {
   imgDice.classList.remove('hide');
 
@@ -145,6 +147,8 @@ const handleHoldScore = () => {
 
     // btnRollDice.disabled = true;
     handleDisableRollDiceBtn(true);
+
+    hideImgDiceRoll();
     return;
   }
   updateCurrentScore(activePlayer, -arrPlayerCurrentScore[activePlayer]);
